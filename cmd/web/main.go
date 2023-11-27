@@ -35,7 +35,7 @@ func handlePostRequest(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// validates the card number
-	valid, issuer := validation.CheckCard(reqBody.CreditCardNumber)
+	valid, issuer := validation.CheckCardNumber(reqBody.CreditCardNumber)
 
 	// makes json response
 	resp := jsonResponse{Valid: valid, Issuer: issuer}
